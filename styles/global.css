@@ -1,0 +1,17 @@
+ html * {
+    font-family: "sans-serif";
+  }
+  body {
+      font: small-caps 15px serif;
+      color: black;
+      margin-left: 5%;
+      margin-right: 20%;
+      background: url(2.jpg) no-repeat ;
+      background-size: cover;
+  }
+  h1 { text-align: center; font-size: 30px; }
+  h2 { text-align: center; font-size: 15px; }
+  h3 {font-size: 15px;}
+  div1{font-size: 20px; color: white; }
+
+  
