@@ -6,7 +6,7 @@
       color: black;
       margin-left: 5%;
       margin-right: 20%;
-      background: url(2.jpg) no-repeat ;
+      background-repeat: no-repeat;background: url(2.jpg) no-repeat ;
       background-size: cover;
   }
 h1 { text-align: center; font-size: 30px; }
@@ -47,3 +47,17 @@ tr:nth-child(odd) { background-color: rgba(0, 140, 186, 0.85); }
 tr:nth-child(even) { background-color: rgba(0, 72, 186, 0.85); }
 #result { border-color: red; }
 tr.error { background-color: red; }
+
+.column, .columns {
+position: relative;
+padding-left: 0.9375rem;
+padding-right: 0.9375rem;
+width: 100%;
+float: left;
+}
+
+a {
+color: orange;
+text-decoration: underline;
+line-height: inherit;
+}
