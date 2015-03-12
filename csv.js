@@ -52,5 +52,4 @@ function calculate() {
   if (window.localStorage && localStorage.original) {
   document.getElementById("original").value = localStorage.original;
   }
->>>>>>> gh-pages
 };
