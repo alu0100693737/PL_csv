@@ -4,8 +4,9 @@ margin:0;
 font: small-caps 10px serif;
       margin-left: 5%;
       margin-right: 20%;
-      background: #A9F5D0 url(../2.jpg) no-repeat ;
+      background: #A9F5D0 url(../styles/2.jpg) no-repeat ;
       background-size: cover;
+      color: white;
 }
 #mocha {
 font: 20px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
