@@ -26,12 +26,11 @@
 	<div id="mocha"></div>
 	<textarea id="original"></textarea>
 	<span class="output" id="finaltable"></span>
+	<script src="mocha.js"></script>
 	<script src="chai.js"></script>
 	<script src="blanket.js" 
 	    data-cover-adapter="mocha-blanket.js"></script>
-	<script src="mocha.js"></script>
 	<script src="../csv.js" data-cover></script>
-	<script>mocha.setup('bdd')</script>
 	<script>mocha.setup('tdd')</script>
 
 	<script src="tests.js"></script>
