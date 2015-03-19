@@ -6,7 +6,7 @@ module.exports = function(config) {
       basePath: '',
 // frameworks to use
 // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-      frameworks: ['mocha', 'chai'],
+      frameworks: ['karma-jquery', 'mocha', 'chai'],
       client: {
 	  mocha: {
 	    ui: 'tdd'
@@ -46,7 +46,7 @@ module.exports = function(config) {
       autoWatch: true,
       // start these browsers
       // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-      browsers: [ 'PhantomJS', 'Firefox', 'Chrome'],
+      browsers: [ 'PhantomJS'],
       // Continuous Integration mode
       // if true, Karma captures browsers, runs the tests and exits
       singleRun: false

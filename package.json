@@ -4,7 +4,7 @@
   "description": "CVS Analizer",
   "main": "csv.js",
   "scripts": {
-    "test": "node_modules/karma/bin/karma start --single-run"
+    "test": "firefox tests/index.html"
   },
   "repository": {
     "type": "git",
