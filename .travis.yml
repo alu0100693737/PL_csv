@@ -9,5 +9,4 @@ before_script:
 
 branches:
 only:
-
 - gh-pages
