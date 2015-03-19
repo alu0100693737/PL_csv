@@ -12,9 +12,11 @@ gulp.task('minify', function () {
   gulp.src('csv.js')
   .pipe(uglify())
   .pipe(gulp.dest('minified'));
+  
   gulp.src('./index.html')
   .pipe(minifyHTML())
   .pipe(gulp.dest('./minified/'))
+  
   gulp.src('./*.css')
   .pipe(minifyCSS({keepBreaks:true}))
   .pipe(gulp.dest('./minified/'))
