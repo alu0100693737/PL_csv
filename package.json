@@ -13,6 +13,9 @@
   "keywords": [
     "csv"
   ],
+  "engines": {
+    "node": "0.10.x"
+  }
   "author": "Ivan Garcia",
   "license": "ISC",
   "bugs": {
