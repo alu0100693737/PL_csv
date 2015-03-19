@@ -6,7 +6,7 @@ module.exports = function(config) {
       basePath: '',
 // frameworks to use
 // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-      frameworks: ['karma-jquery', 'mocha', 'chai'],
+      frameworks: ['mocha', 'chai'],
       client: {
 	  mocha: {
 	    ui: 'tdd'
@@ -42,14 +42,14 @@ module.exports = function(config) {
       colors: true,
       // level of logging
       // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-      logLevel: config.LOG_INFO,
+      logLevel: config.LOG_DEBUG,
       // enable / disable watching file and executing tests whenever any file changes
       autoWatch: true,
       // start these browsers
       // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-      browsers: [ 'Firefox'],
+      browsers: [ 'Chrome', 'PhanthomJS'],
       // Continuous Integration mode
       // if true, Karma captures browsers, runs the tests and exits
-      singleRun: false
+      singleRun: true
   });
 };
