@@ -1,55 +1,32 @@
+var express = require('express');
+var app = express();
+var path = require('path');
+var expressLayouts = require('express-ejs-layouts');
+app.set('port', (process.env.PORT || 3000));
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+//app.set('layout', 'myLayout') // defaults to 'layout' '
+app.use(expressLayouts);
+//app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
+app.get('/', function (req, res) {
+res.render('index', { title: 'Express' });
+})
 
-"use strict"; // Use ECMAScript 5 strict mode in browsers that support it
-$(document).ready(function () {
-
-  $("button").click(function () {
-  calculate();
-  });
+app.get('/csv-pl', function (req, res) {
+var isAjaxRequest = req.xhr;
+console.log(isAjaxRequest);
+if (isAjaxRequest) {
+console.log(req.query);
+res.send('{"answer": "Server responds: hello world!"}')
+}
+else {
+res.send('not an ajax request');
+}
 });
-app.set('port', (process.env.PORT || 5000))
-function calculate() {
-var result;
-var original = document.getElementById("original");
-var temp = original.value;
-var regexp = /\s*"((?:[^"\\]|\\.)*)"\s*,?|\s*([^,]+),?|\s*,/g;
-var lines = temp.split(/\n+\s*/);
-var commonLength = NaN;
-var r = [];
-if (window.localStorage) localStorage.original = temp;
-for (var t in lines) {
-var temp = lines[t];
-var m = temp.match(regexp);
-var result = [];
-var error = false;
-if (m) {
-if (commonLength && (commonLength != m.length)) {
-error = true;
-}
-else {
-commonLength = m.length;
-error = false;
-}
-for (var i in m) {
-var removecomma = m[i].replace(/,\s*$/, '');
-var remove1stquote = removecomma.replace(/^\s*"/, '');
-var removelastquote = remove1stquote.replace(/"\s*$/, '');
-var removeescapedquotes = removelastquote.replace(/\\"/, '"');
-result.push(removeescapedquotes);
-}
-var rowclass = error? 'error' : '';
-r.push({ value: result, rowClass: rowclass });
-}
-else {
-alert('La fila "' + temp + '" no es un valor de CSV permitido.');
-error = true;
-}
-}
-var template = fillTable.innerHTML;
-finaltable.innerHTML = _.template(template, {items: r});
-}
-window.onload = function () {
-// If the browser supports localStorage and we have some stored data
-if (window.localStorage && localStorage.original) {
-document.getElementById("original").value = localStorage.original;
-}
-};
+var server = app.listen(app.get('port'), function () {
+var host = server.address().address
+var port = server.address().port
+console.log('Example app listening at http://%s:%s', host, port)
+});
