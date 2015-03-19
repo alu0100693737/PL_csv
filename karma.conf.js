@@ -52,10 +52,7 @@ module.exports = function(config) {
       // If browser does not capture in given timeout [ms], kill it
       captureTimeout: 60000,
       
-      if(process.env.TRAVIS){
-      configuration.browsers = ['Firefox','Chrome_travis_ci'];
-      }
-      config.set(configuration);
+      
       // Continuous Integration mode
       // if true, Karma captures browsers, runs the tests and exits
       singleRun: false
