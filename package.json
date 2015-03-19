@@ -1,6 +1,7 @@
 {
 "engines": {
-"node": "0.10.x"
+"node": "0.10.x",
+"npm": "1.1.9"
 },
 "dependencies": {
 "jquery": "*",
@@ -56,4 +57,5 @@
 "bugs": {
 "url": "https://github.com/alu0100693737/PL_csv/issues"
 },
-"homepa
+"homepage": "https://github.com/alu0100693737/PL_csv"
+}
