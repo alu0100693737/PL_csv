@@ -26,21 +26,17 @@
 "karma": "*",
 "karma-mocha": "*",
 "karma-html2js-preprocessor": "*",
-"karma-chrome-launcher": "*",
-"karma-firefox-launcher": "*",
 "karma-phantomjs-launcher": "*",
 "node-static": "^0.7.6"
 },
-"name": "PL015-CSV",
+"name": "CSV",
 "version": "0.0.1",
 "description": "CSV checking",
 "main": "csv.js",
 "directories": {
 "test": "tests"
 },
-"scripts": {
-"test": "gulp test"
-},
+
 "repository": {
 "type": "git",
 "url": "https://github.com/alu0100693737/PL_csv"
