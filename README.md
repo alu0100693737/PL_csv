@@ -6,16 +6,16 @@ Nota: esta pagina ha sido desarrollada usando Marckdown.
 
 ### ***cvs.js***
 
-# http://alu0100693737.github.io/PL_csv/
+http://alu0100693737.github.io/PL_csv/
 
-Javascript application: Comma Separated Values.
+### Javascript application: Comma Separated Values.
 
 "producto",           "precio"
 "camisa",             "4,3"
 "libro de O\"Reilly", "7,2"
 
 ### Participantes.
-Iván García Campos.
+###### Iván García Campos.
 
 ### JQuery 
  jQuery is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML. 
